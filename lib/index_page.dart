@@ -1,3 +1,4 @@
+import 'package:demo/account_screen.dart';
 import 'package:demo/home_page.dart';
 import 'package:demo/reward_page.dart';
 import 'package:flutter/material.dart';
@@ -12,9 +13,8 @@ class IndexPage extends StatefulWidget {
 class _IndexPageState extends State<IndexPage> {
   int currentPage = 0;
   List<Widget> pages = const [
-  
     HomePage(),
-    
+    AccountScreen(),
     RewardPage(),
   ];
   @override
