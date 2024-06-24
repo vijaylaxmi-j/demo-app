@@ -30,10 +30,14 @@ final Map<IconData, String> accountItems = {
 
   @override
   Widget build(BuildContext context) {
+     bool light = true;
     final List<MapEntry<IconData, String>> accountList =
         accountItems.entries.toList();
     return Scaffold(
       appBar: AppBar(
+        // scrolledUnderElevation:0,
+        // surfaceTintColor: Colors.transparent,
+        forceMaterialTransparency:true, // Removes the color of app bar chaning while scrolling
         shape: const Border(
           bottom: BorderSide(
             color: Color.fromRGBO(212, 211, 212, 0.238),
@@ -82,7 +86,7 @@ final Map<IconData, String> accountItems = {
                       ),
                       Text(
                         'User Id:1545858N',
-                        style: const TextStyle(color: Colors.grey),
+                        style: const TextStyle(color: Colors.grey,fontSize: 12),
                       ),
                     ],
                   ),
@@ -115,11 +119,43 @@ final Map<IconData, String> accountItems = {
                             fontWeight: FontWeight.bold,fontSize: 12,
                           ),),
                           trailing:
-                              const Icon(Icons.arrow_forward_ios_outlined,size:12),
+                              entry.value!='Sound' && entry.value!='Dark Mode' ?const Icon(Icons.arrow_forward_ios_outlined,size:12): const SwitchWidget(),
                         ),
                       );
                     }))
           ],
+        ),
+      ),
+    );
+  }
+}
+class SwitchWidget extends StatefulWidget {
+  const SwitchWidget({super.key});
+
+  @override
+  State<SwitchWidget> createState() => _SwitchWidgetState();
+}
+
+class _SwitchWidgetState extends State<SwitchWidget> {
+  bool light = true;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 30,
+      width: 50,
+      child: FittedBox(
+        fit: BoxFit.fill,
+        child: Switch(
+          // This bool value toggles the switch.
+          value: light,
+          activeColor:Theme.of(context).colorScheme.primary,
+          onChanged: (bool value) {
+            // This is called when the user toggles the switch.
+            setState(() {
+              light = value;
+            });
+          },
         ),
       ),
     );
