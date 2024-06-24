@@ -50,7 +50,7 @@ final Map<IconData, String> accountItems = {
           ),
         ],
         title: Text('Yowza',
-            style: TextStyle(
+            style:const TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.bold,
             )),
@@ -66,7 +66,7 @@ final Map<IconData, String> accountItems = {
                 shape: BoxShape.rectangle,
                 borderRadius: BorderRadius.circular(15),
                 border: Border.all(
-                    width: 2, color: Color.fromRGBO(212, 211, 212, 0.238)),
+                    width: 2, color: const Color.fromRGBO(212, 211, 212, 0.238)),
               ),
               child: Row(
                 children: [
