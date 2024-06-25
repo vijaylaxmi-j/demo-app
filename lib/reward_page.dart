@@ -19,9 +19,7 @@ class RewardPage extends StatelessWidget {
       child: Scaffold(
         // resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: const Text(
-            'Rewards',
-          ),
+          
           actions: <Widget>[
             IconButton(
               onPressed: () {},
@@ -32,13 +30,16 @@ class RewardPage extends StatelessWidget {
               icon: const Icon(Icons.currency_rupee),
             )
           ],
-          centerTitle: true,
+          title: const Text(
+            'Rewards',
+          ),
+          
         ),
         body: SingleChildScrollView(
           child: Container(
              padding: const EdgeInsets.all(0),
             margin: const EdgeInsets.all(0),
-            width:700,
+            width: double.infinity,
             child: Column(
               
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -50,7 +51,7 @@ class RewardPage extends StatelessWidget {
                   child: Image(
                     image: AssetImage("assets/images/nike.webp"),
                     height: 175,
-                    width:500,
+                    width:double.infinity,
                      fit: BoxFit.fill,
                   ),
                 ),
