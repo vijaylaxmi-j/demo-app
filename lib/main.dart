@@ -1,9 +1,14 @@
 import 'package:demo/Index_page.dart';
 import 'package:flutter/material.dart';
+// import 'package:flutter/rendering.dart';
 
 void main() {
   runApp(const MyApp());
+  // SemanticsBinding.instance.ensureSemantics();
 }
+
+
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -28,6 +33,14 @@ class MyApp extends StatelessWidget {
         ),
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(backgroundColor: const Color.fromARGB(255, 1, 119, 254),foregroundColor: Colors.white),
+        ),
+        appBarTheme: const AppBarTheme(
+          titleTextStyle: TextStyle(
+            fontSize:14,
+            fontFamily: 'Medium',
+            color: Colors.black,
+            
+          ),
         ),
       ),
       home: const IndexPage(),

@@ -1,5 +1,7 @@
 import 'package:demo/account_screen.dart';
+import 'package:demo/all_games_screen.dart';
 import 'package:demo/home_page.dart';
+import 'package:demo/leader_board_screen.dart';
 import 'package:demo/reward_page.dart';
 import 'package:flutter/material.dart';
 
@@ -14,8 +16,10 @@ class _IndexPageState extends State<IndexPage> {
   int currentPage = 0;
   List<Widget> pages = const [
     HomePage(),
+    AllGamesScreen(),
     AccountScreen(),
     RewardPage(),
+    LeaderBoardScreen(),
   ];
   @override
   Widget build(BuildContext context) {

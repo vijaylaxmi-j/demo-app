@@ -52,10 +52,7 @@ class _AccountScreenState extends State<AccountScreen> {
           ),
         ],
         title: Text(appName,
-            style: const TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.bold,
-            )),
+           ),
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(15, 20, 15, 20),
